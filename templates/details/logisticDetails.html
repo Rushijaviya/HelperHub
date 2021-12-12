@@ -1,0 +1,365 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Basic -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!-- Site Metas -->
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link rel="shortcut icon" href="{% static 'img/logogo.png' %}" type="">
+
+    <title> Logistic Details </title>
+
+    <!-- bootstrap core css -->
+    <link rel="stylesheet" type="text/css" href="{% static 'assets1/css/bootstrap.css' %}" />
+
+    <!--owl slider stylesheet -->
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <!-- nice select  -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css"
+        integrity="sha512-CruCP+TD3yXzlvvijET8wV5WxxEh5H8P4cmz0RFbKK6FlZ2sYl3AEsKlLPHbniXKSrDdFewhbmBK5skbdsASbQ=="
+        crossorigin="anonymous" />
+    <!-- font awesome style -->
+    <link href="{% static 'assets1/css/font-awesome.min.css' %}" rel="stylesheet" />
+
+    <!-- Custom styles for this template -->
+    <link href="{% static 'assets1/css/style.css' %}" rel="stylesheet" />
+    <!-- responsive style -->
+    <link href="{% static 'assets1/css/responsive.css' %}" rel="stylesheet" />
+
+
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Roboto:300,400,600);
+
+        body {
+            background-color: #fffefe;
+            display: block;
+        }
+
+        .snip1336 {
+            font-family: 'Roboto', Arial, sans-serif;
+            margin-top: 50px;
+            margin-bottom: 50px;
+            margin-left: 450px;
+            position: relative;
+            overflow: hidden;
+            min-width: 300px;
+            max-width: 440px;
+            width: 100%;
+            color: #ffffff;
+            text-align: left;
+            line-height: 1.4em;
+            background-color: #202932;
+            border-radius: 7px;
+        }
+
+        .snip1336 * {
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            -webkit-transition: all 0.25s ease;
+            transition: all 0.25s ease;
+        }
+
+        .snip1336 img {
+            max-width: 100%;
+            vertical-align: top;
+            opacity: 0.85;
+        }
+
+        .snip1336 figcaption {
+            width: 100%;
+            background-color: #202932;
+            padding: 25px;
+            position: relative;
+        }
+
+        .snip1336 figcaption:before {
+            position: absolute;
+            content: '';
+            bottom: 100%;
+            left: 0;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 55px 0 0 400px;
+            border-color: transparent transparent transparent #202932;
+        }
+
+        .snip1336 figcaption a {
+            padding: 5px;
+            border: 1px solid #ffffff;
+            color: #ffffff;
+            font-size: 0.9em;
+            text-transform: uppercase;
+            margin: 10px 0;
+            display: inline-block;
+            opacity: 0.65;
+            width: 47%;
+            text-align: center;
+            text-decoration: none;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+        .snip1336 figcaption a:hover {
+            opacity: 1;
+        }
+
+        .snip1336 .profile {
+            border-radius: 50%;
+            position: absolute;
+            bottom: 100%;
+            left: 25px;
+            z-index: 1;
+            max-width: 90px;
+            opacity: 1;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .snip1336 .follow {
+            margin-right: 4%;
+            border-color: rgb(255, 187, 0);
+            color: rgb(255, 187, 0);
+        }
+
+        .snip1336 h2 {
+            margin: 0 0 5px;
+            font-weight: 300;
+        }
+
+        .snip1336 h2 span {
+            display: block;
+            font-size: 0.5em;
+            color: #2980b9;
+        }
+
+        .snip1336 p {
+            margin: 0 0 10px;
+            font-size: 0.8em;
+            letter-spacing: 1px;
+            opacity: 0.8;
+        }
+
+        hr {
+            /*dummy content*/
+            height: 1px;
+            border: none;
+            background: rgb(255, 187, 0);
+        }
+
+        hr:last-child {
+            /*dummy content*/
+            margin-right: 60%;
+        }
+
+        hr.image {
+            /*dummy content*/
+            padding-bottom: 50%;
+        }
+
+        .iconx:hover {
+            filter: grayscale(100%) sepia(100%);
+        }
+
+        .icon:hover {
+            filter: invert(0.5)
+        }
+    </style>
+</head>
+
+<body class="sub_page">
+
+    <div class="hero_area">
+        <div class="bg-box">
+            <img src="{% static 'assets1/images/hero-bg.jpg' %}" alt="">
+        </div>
+        <!-- header section strats -->
+        <header class="header_section">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg custom_nav-container ">
+                    <a class="navbar-brand" href="{% url 'index' %}">
+                        <span>
+                            Helper Hub
+                        </span>
+                    </a>
+    
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class=""> </span>
+                    </button>
+    
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav  mx-auto ">
+                            <li class="nav-item ">
+                                <a class="nav-link" href="{% url 'index' %}">Home </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="{% url 'menu' %}">Hub</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'about' %}">About <span class="sr-only">(current)</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'contact' %}">Contact Us</a>
+                            </li>
+                        </ul>
+                        <div class="user_option">
+                            {% if user.is_authenticated %}
+                            <a href="{% url 'signout' %}" class="order_online">Signout</a> {% else %}
+                            <a href="{% url 'signin' %}" class="order_online">Sign Up/Sign In</a> {% endif %}
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <!-- end header section -->
+    </div>
+
+
+    {% for doctor, doctorinfo in fin_ans %}
+
+    <figure class="snip1336">
+        <img src="{% static 'images/forlogistics.jpeg' %}" alt="sample87" />
+        <figcaption>
+
+            <h2>{{doctor}}<span>Logistic</span></h2>
+            <p>
+                Gender: {{doctorinfo.gender}}<br>
+                Logistic Type: {{doctorinfo.logistic_type}}<br>
+
+                <hr>
+            <p>{{doctorinfo.bio}}</p>
+            <hr>
+            Description: <p>{{doctorinfo.description}}</p>
+            <hr>
+
+            DOB: <p>{{doctorinfo.dob}} <br> </p>
+            Mobile Number : <p>{{doctor.mobile_number}} <br> </p>
+            Flat No: <p>{{doctor.flat_no}} <br> </p>
+
+
+
+            <a href="#" class="follow">Contact</a>
+            <a href="#" class="info">Chat</a>
+        </figcaption>
+    </figure>
+
+    {% endfor %}
+
+    <script>
+        const target = {
+            clicked: 0,
+            currentFollowers: 90,
+            btn: document.querySelector("a.btn"),
+            fw: document.querySelector("span.followers")
+        };
+
+        const follow = () => {
+            target.clicked += 1;
+            target.btn.innerHTML = 'Following <i class="fas fa-user-times"></i>';
+
+            if (target.clicked % 2 === 0) {
+                target.currentFollowers -= 1;
+                target.btn.innerHTML = 'Follow <i class="fas fa-user-plus"></i>';
+            }
+            else {
+                target.currentFollowers += 1;
+            }
+
+            target.fw.textContent = target.currentFollowers;
+            target.btn.classList.toggle("following");
+        }
+
+    </script>
+
+
+    <footer class="footer_section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 footer-col">
+                    <div class="footer_contact">
+                        <h4>
+                            Contact Us
+                        </h4>
+                        <div class="contact_link_box">
+                            <a
+                                href="https://www.google.com/maps/place/Gandhinagar,+Gujarat/@23.220852,72.5755074,12z/data=!4m5!3m4!1s0x395c2b987c6d6809:0xf86f06a7873e0391!8m2!3d23.2157912!4d72.636795">
+                                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                <span>
+                                    Location
+                                </span>
+                            </a>
+                            <a href="">
+                                <i class="fa fa-phone" aria-hidden="true"></i>
+                                <span>
+                                    Call +1 626 507 7005
+                                </span>
+                            </a>
+                            <a href="">
+                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                                <span>
+                                    icpccoders08@gmail.com
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 footer-col">
+                    <div>
+                        <div class="footer_detail">
+                            <img src="{% static 'img/logogo.png' %}" class="icon" style="height: 150px; width: 150px;"
+                                alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 footer-col" style="padding-top: 45px;">
+                    <a href="" class="footer-logo">
+                        Helper Hub
+                    </a>
+                </div>
+            </div>
+            <div class="footer-info">
+                <p>
+                    &copy; <span id="displayYear"></span> All Rights Reserved By
+                    <a href="">Debug Thugs</a> <span id="displayYear"></span>
+                </p>
+            </div>
+        </div>
+    </footer>
+    <!-- footer section -->
+
+    <!-- jQery -->
+    <script src="{% static 'assets1/js/jquery-3.4.1.min.js' %}"></script>
+    <!-- popper js -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+        </script>
+    <!-- bootstrap js -->
+    <script src="{% static 'assets1/js/bootstrap.js' %}"></script>
+    <!-- owl slider -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
+    </script>
+    <!-- isotope js -->
+    <script src="https://unpkg.com/isotope-layout@3.0.4/dist/isotope.pkgd.min.js"></script>
+    <!-- nice select -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"></script>
+    <!-- custom js -->
+    <script src="{% static 'assets1/js/custom.js' %}"></script>
+    <!-- Google Map -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap">
+    </script>
+    <!-- End Google Map -->
+
+</body>
+
+</html>

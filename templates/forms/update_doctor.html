@@ -1,0 +1,153 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Doctor Update Info Form</title>
+    <link rel="shortcut icon" href="{% static '../img/logogo.png' %}" type="">
+    <!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- Font-->
+    <link rel="stylesheet" type="text/css" href="{% static 'assets2/css/montserrat-font.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'assets2/fonts/material-design-iconic-font/css/material-design-iconic-font.min.css' %}">
+    <!-- Main Style Css -->
+    <link rel="stylesheet" href="{% static 'assets2/css/style.css' %}" />
+
+    <style>
+        #id_doctor {
+            display: none;
+        }
+        select{
+            background-color: #1F253B;
+        }
+        .page-content {
+            background-image: url('static/img/951548.jpg');
+            background-size: cover;
+            width: 100%;
+            margin: 0 auto;
+            /* background: rgba(196, 188, 188, 0.747); */
+            display: flex;
+            display: -webkit-flex;
+            justify-content: center;
+            -o-justify-content: center;
+            -ms-justify-content: center;
+            -moz-justify-content: center;
+            -webkit-justify-content: center;
+            align-items: center;
+            -o-align-items: center;
+            -ms-align-items: center;
+            -moz-align-items: center;
+            -webkit-align-items: center;
+            /* background-image: -moz-linear-gradient( 136deg, rgb(0, 0, 0) 0%, rgb(0, 0, 0));
+            background-image: -webkit-linear-gradient( 136deg, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 100%);
+            background-image: -ms-linear-gradient( 136deg, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 100%); */
+        }
+    </style>
+
+</head>
+
+<body class="form-v10">
+    <div class="page-content">
+        <div class="form-v10-content">
+            <form class="form-detail" action="" method="POST" id="myform">
+
+                {% csrf_token %}
+                <div class="form-left" style="background-image: url(https://cdn.pixabay.com/photo/2020/06/01/18/42/covid-5247929_960_720.png); background-size: cover;">
+                    
+                    {{errors}}
+
+
+                </div>
+
+                <select name="doctor" required id="id_doctor">
+                                    <option value="" selected>---------</option>
+
+                                    {% for user in users %}
+                                    <option value="{{user.id}}">{{user.username}}</option>
+                                    {% endfor %}
+
+                                </select>
+                <div class="form-right" style="background-image: linear-gradient(to bottom right, #034571, #313251);">
+                    <h2>Update Form</h2>
+                    <div class="form-row">
+                        <select name="degree_type" required id="id_degree_type">
+                            <option value="Degree" disabled selected hidden>Degree Type</option>
+						    <option value="MBBS">Bachelor of Medicine, Bachelor of Surgery(MBBS)</option>
+						    <option value="BDS">Bachelor of Dental Surgery(BDS)</option>
+						    <option value="BAMS">Bachelor of Ayurvedic Medicine and Surgery(BAMS)</option>
+						    <option value="BAMS">Bachelor of Unani Medicine and Surgery(BUMS)</option>
+                            <option value="BHMS">Bachelor of Homeopathy Medicine and Surgery(BHMS)</option>
+						    <option value="BYNS">Bachelor of Yoga and Naturopathy Sciences(BYNS)</option>
+						    <option value="B.V.Sc & AH">Bachelor of Veterinary Sciences and Animal Husbandry(BVSc&AH)</option>
+						    <option value="MD">Doctor of Medicine(MD)</option>
+                            <option value="MS">Master of Surgery(MS)</option>
+						    <option value="DM">Doctorate of Medicine(DM)</option>
+						</select>
+                        <span class="select-btn">
+						  	<i class="zmdi zmdi-chevron-down"></i>
+						</span>
+                    </div>
+
+
+                    <div class="form-row">
+                        <select name="specialities_type" required id="id_specialities_type">
+                            <option value="Specialization" disabled selected hidden>Specialization Type</option>
+						    <option value="ENT">"ENT", "Ear, Nose and Throat"</option>
+						    <option value="GS">General Surgery</option>
+                            <option value="OP">Ophthalmology</option>
+                            <option value="OR">Orthopaedics</option>
+                            <option value="OAG">Obstetrics and Gynaecology</option>
+                            <option value="DVL">Dermatology, Venerology and Leprosy</option>
+                            <option value="AST">Anaesthesiology</option>
+                            <option value="PSY">Psychiatry</option>
+						    <option value="PTH">Pathology</option>
+                            <option value="SVD">Skin and Venereal diseases</option>
+						    <option value="PHRM">Pharmacology</option>
+						    <option value="PMR">Physical Medicine and Rehabilitation</option>
+						    <option value="PHY">Physiology</option>
+                            <option value="CRD">Cardiology</option>
+						    <option value="PDT">Paediatrics</option>
+						</select>
+                        <span class="select-btn">
+						  	<i class="zmdi zmdi-chevron-down"></i>
+						</span>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="form-row form-row-1">
+                            <input type="date" name="dob" class="zip" id="zip" placeholder="Zip Code" required maxlength="10" id="id_dob">
+                        </div>
+                        <div class="form-row form-row-2">
+                            <select name="gender" required id="id_gender">
+							    <option value="Gender" disabled selected hidden>Gender</option>
+							    <option value="M">Male</option>
+							    <option value="F">Female</option>
+							    <option value="T">Transgender</option>
+                                <option value="N">Prefer Not to Say</option>
+							</select>
+                            <span class="select-btn">
+							  	<i class="zmdi zmdi-chevron-down"></i>
+							</span>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        
+                        <br>
+                        <label style="color: white; padding-left: 15px;">Bio</label><br><br>
+                        <textarea id="bio" name="bio" required id="id_bio" rows="5" cols="54" style="color:white; background: transparent; outline-color: #4835d4; resize: none;"></textarea>
+                    </div>
+                    <div class="form-row">
+                        <br>
+                        <label style="color: white; padding-left: 15px;">Description</label><br><br>
+                        <textarea id="description" name="description" required id="id_description" rows="7" cols="54" style="color:white; background: transparent; outline-color: #4835d4; resize: none;"></textarea>
+                    </div>
+                    <div class="form-row-last">
+                        <input type="submit" name="register" class="register" value="Update" onclick="fun()">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

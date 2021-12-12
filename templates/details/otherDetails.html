@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Other Details</title>
+</head>
+
+<body>
+    Doctor Details <br> 
+    {% for doctor, doctorinfo in fin_ans %} 
+
+    <br> <br>
+
+    Mobile Number : {{doctor.mobile_number}} <br> 
+    Flat No: {{doctor.flat_no}} <br> 
+    Bio: {{doctorinfo.bio}} <br>
+    Description: {{doctorinfo.description}} <br>  <br> <br>
+
+    {% endfor %}
+
+
+</body>
+
+</html>

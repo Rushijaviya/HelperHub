@@ -1,0 +1,32 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Login/Sign Up</title>
+    <link rel="shortcut icon" href="{% static '../img/logogo.png' %}" type="">
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans:600'>
+    <link rel="stylesheet" href="static/login.css">
+
+
+</head>
+
+<body>
+
+    <form action="{% url 'signup' %}" method="POST">
+        {% csrf_token %}
+
+        {{user_form.as_p}}
+
+        {{user_info_form.as_p}}
+
+        <div class="group">
+            <input type="submit" class="button" value="Sign Up">
+        </div>
+    </form>
+
+</body>
+
+</html>

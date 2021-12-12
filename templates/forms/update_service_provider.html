@@ -1,0 +1,113 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Service Provider Update Form</title>
+    <link rel="shortcut icon" href="{% static '../img/logogo.png' %}" type="">
+    <!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- Font-->
+    <link rel="stylesheet" type="text/css" href="{% static 'assets2/css/montserrat-font.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'assets2/fonts/material-design-iconic-font/css/material-design-iconic-font.min.css' %}">
+    <!-- Main Style Css -->
+    <link rel="stylesheet" href="{% static 'assets2/css/style.css' %}" />
+
+    <style>
+        #id_service_provider{
+            display: none;
+        }
+        select{
+            background-color: #1F253B;
+        }
+        .page-content {
+            background-image: url('static/img/951548.jpg');
+            background-size: cover;
+            width: 100%;
+            margin: 0 auto;
+            /* background: rgba(196, 188, 188, 0.747); */
+            display: flex;
+            display: -webkit-flex;
+            justify-content: center;
+            -o-justify-content: center;
+            -ms-justify-content: center;
+            -moz-justify-content: center;
+            -webkit-justify-content: center;
+            align-items: center;
+            -o-align-items: center;
+            -ms-align-items: center;
+            -moz-align-items: center;
+            -webkit-align-items: center;
+            /* background-image: -moz-linear-gradient( 136deg, rgb(0, 0, 0) 0%, rgb(0, 0, 0));
+            background-image: -webkit-linear-gradient( 136deg, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 100%);
+            background-image: -ms-linear-gradient( 136deg, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 100%); */
+        }
+    </style>
+
+</head>
+
+<body class="form-v10">
+    <div class="page-content">
+        <div class="form-v10-content">
+            <form class="form-detail" action="#" method="post" id="myform">
+                {% csrf_token %}
+                <div class="form-left" style="background-image: url(https://www.ezeeserve.com/images/Service-provider/img-service.png); background-size: cover;">
+                    
+                    {{errors}}
+
+                </div>
+
+<select name="service_provider" required id="id_service_provider">
+                                    <option value="" selected>---------</option>
+
+                                    {% for user in users %}
+                                    <option value="{{user.id}}">{{user.username}}</option>
+                                    {% endfor %}
+
+                                </select>
+
+                <div class="form-right" style="background-image: linear-gradient(to bottom right, #034571, #313251);">
+                    <h2>Service Provider Update Form</h2>
+                    <div class="form-row">
+
+                        <select name="service_type" required id="id_service_type">
+                            <option value="service_type" disabled selected hidden>Service Type</option>
+						    <option value="Electrician">Electrician</option>
+						    <option value="Plumber">Plumber</option>
+						    <option value="Driver">Driver</option>
+						    <option value="Mechanic">Mechanic</option>
+                            <option value="Grocer">Grocer</option>
+						    <option value="Carpenter">Carpenter</option>
+						    <option value="Consultant">Consultant</option>
+						    <option value="Chef">Chef</option>
+                            <option value="Barber">Barber</option>
+						    <option value="Other">Other</option>
+						</select>
+                        <span class="select-btn">
+						  	<i class="zmdi zmdi-chevron-down"></i>
+						</span>
+                    </div>
+
+
+                    
+                    <div class="form-row">
+                        
+                        <br>
+                        <label style="color: white; padding-left: 15px;">Bio</label><br><br>
+                        <textarea id="id_bio" name="bio" rows="5" cols="54" style="color:white; background: transparent; outline-color: #4835d4; resize: none;"></textarea>
+                    </div>
+                    <div class="form-row">
+                        <br>
+                        <label style="color: white; padding-left: 15px;">Description</label><br><br>
+                        <textarea id="id_description" name="description" rows="7" cols="54" style="color:white; background: transparent; outline-color: #4835d4; resize: none;"></textarea>
+                    </div>
+                    <div class="form-row-last">
+                        <input type="submit" name="register" class="register" value="Update" onclick="fun()">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
