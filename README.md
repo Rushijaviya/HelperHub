@@ -34,3 +34,22 @@ Debug Thugs
 * This project will have a good impact upon the society.
 * Every person can become more friendly with their neighbourhood.
 * They can contact doctor, tutor, logistic services or any other service provider in their neighbour whenever needed
+
+
+## How to run
+```bash
+# Fetch the HelperHub repo using git
+git clone https://github.com/Rushijaviya/HelperHub.git
+
+# Go inside the HelperHub directory
+cd HelperHub
+
+# Install a compatible version of HelperHub
+pip install -r requirements.txt
+
+# run command
+python manage.py runserver
+
+# Go to this url in browser
+http://127.0.0.1:8000/
+```
