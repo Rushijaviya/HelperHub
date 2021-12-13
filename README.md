@@ -1,4 +1,4 @@
-# GHS - Global Healthcare System
+# Helper Hub
 
 ## Website
 [Helper Hub](https://helper-hub.herokuapp.com/)
