@@ -3,6 +3,12 @@
 ## Website
 [Helper Hub](https://helper-hub.herokuapp.com/)
 
+## YouTube
+[Helper Hub Video](https://youtu.be/IoUW8E62lmg)
+
+## PPT
+[Helper Hub PPT](https://docs.google.com/presentation/d/1qH5LHa3j-EDy17cpWjfQXLzVRmrQb-8MiAU7cyPy66w/edit?usp=sharing)
+
 ## Team Name 
 Debug Thugs
 
